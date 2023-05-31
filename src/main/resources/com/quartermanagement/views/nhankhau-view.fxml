@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="basePane" prefHeight="600.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quartermanagement.Controller.NhanKhau.NhanKhauController">
+   <children>
+      <Pagination fx:id="pagination" layoutX="37.0" layoutY="138.0" maxPageIndicatorCount="5" prefHeight="448.0" prefWidth="634.0" />
+      <TableView fx:id="tableView" layoutX="38.0" layoutY="138.0" prefHeight="350.0" prefWidth="634.0" stylesheets="@../styles/table.css">
+         <columns>
+            <TableColumn fx:id="indexColumn" prefWidth="31.200008392333984" text="#" />
+            <TableColumn fx:id="hoVaTenColumn" prefWidth="119.19998168945312" text="Họ và tên" />
+            <TableColumn fx:id="biDanhColumn" prefWidth="88.80001220703127" text="Bí danh" />
+            <TableColumn fx:id="ngaySinhColumn" prefWidth="88.80001220703127" text="Ngày sinh" />
+            <TableColumn fx:id="cccdColumn" prefWidth="75.0" text="CCCD" />
+            <TableColumn fx:id="noiSinhColumn" prefWidth="88.80001220703127" text="Nơi sinh" />
+            <TableColumn fx:id="gioiTinhColumn" prefWidth="75.0" text="Giới tính" />
+            <TableColumn fx:id="nguyenQuanColumn" prefWidth="128.00003051757812" text="Nguyên quán" />
+            <TableColumn fx:id="danTocColumn" prefWidth="75.0" text="Dân tộc" />
+            <TableColumn fx:id="noiThuongTruColumn" prefWidth="88.80001220703127" text="Nơi thường trú" />
+            <TableColumn fx:id="tonGiaoColumn" prefWidth="88.80001220703127" text="Tôn giáo" />
+            <TableColumn fx:id="quocTichColumn" prefWidth="88.80001220703127" text="Quốc tịch" />
+            <TableColumn fx:id="diaChiHienNayColumn" prefWidth="88.80001220703127" text="Địa chỉ hiện nay" />
+            <TableColumn fx:id="ngheNghiepColumn" prefWidth="88.80001220703127" text="Nghề nghiệp" />
+         </columns>
+      </TableView>
+      <Text layoutX="41.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhân khẩu" textAlignment="CENTER" wrappingWidth="98.9140625">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="508.0" layoutY="78.0" mnemonicParsing="false" onAction="#add" style="-fx-background-color: #3f4d67;" text="Thêm mới" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchTextField" layoutX="66.0" layoutY="77.0" onMouseClicked="#search" prefHeight="26.0" prefWidth="205.0" promptText="Lọc theo tên" style="-fx-border-color: #3f4d67; -fx-border-radius: 10px; -fx-background-color: transparent;">
+         <font>
+            <Font name="Segoe UI Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="613.0" layoutY="78.0" mnemonicParsing="false" onAction="#delete" prefHeight="28.0" prefWidth="58.0" style="-fx-background-color: #3f4d67;" text="Xoá" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

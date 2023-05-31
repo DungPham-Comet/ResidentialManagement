@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="710.0" style="-fx-background-color: transparent;" stylesheets="@../styles/nhankhau-detail.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quartermanagement.Controller.CoSoVatChat.CoSoVatChatDeTailController">
+    <children>
+        <!-- Title -->
+        <Text fx:id="title" layoutX="228.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm đồ dùng mới" textAlignment="CENTER" wrappingWidth="235.31402587890625">
+            <font>
+                <Font name="Segoe UI" size="18.0" />
+            </font>
+        </Text>
+        <!--Tên đồ dùng -->
+        <Text layoutX="42.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đồ dùng" wrappingWidth="116.5140380859375">
+            <font>
+                <Font name="Segoe UI" size="18.0" />
+            </font>
+        </Text>
+        <TextField fx:id="tenDoDungTextField" layoutX="233.0" layoutY="210.0" prefHeight="30.0" prefWidth="315.0" promptText="Tên đồ dùng" style="-fx-border-color: #3f4d67; -fx-border-radius: 10px; -fx-background-color: transparent;">
+            <font>
+                <Font name="Segoe UI Italic" size="14.0" />
+            </font>
+        </TextField>
+        <!-- Số lượng -->
+        <Text layoutX="42.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số Lượng" wrappingWidth="107.7139892578125">
+            <font>
+                <Font name="Segoe UI" size="18.0" />
+            </font>
+        </Text>
+        <TextField fx:id="soLuongTextField" layoutX="233.0" layoutY="264.0" prefHeight="30.0" prefWidth="315.0" promptText="Số lượng" style="-fx-border-color: #3f4d67; -fx-border-radius: 10px; -fx-background-color: transparent;">
+            <font>
+                <Font name="Segoe UI Italic" size="14.0" />
+            </font>
+        </TextField>
+        <!--Thêm mới-->
+        <Button fx:id="add_btn" layoutX="406.0" layoutY="559.0" mnemonicParsing="false" onAction="#addnew" prefHeight="28.0" prefWidth="74.0" style="-fx-background-color: #3f4d67;" text="Thêm" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </Button>
+        <!--Cập nhật csvc -->
+        <Button fx:id="update_btn" layoutX="509.0" layoutY="559.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: #3f4d67;" text="Cập nhật" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </Button>
+        <!--Quay lại-->
+        <Button layoutX="613.0" layoutY="559.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #3f4d67;" text="Quay lại" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </Button>
+      <Pane  fx:id="maDoDungPane"    layoutX="22.0" layoutY="134.0" prefHeight="65.0" prefWidth="540.0">
+         <children>
+      
+                    <!-- mã đồ dùng-->
+              <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã đồ dùng" textAlignment="CENTER" wrappingWidth="107.7139892578125">
+                  <font>
+                      <Font name="Segoe UI" size="18.0" />
+                  </font>
+              </Text>
+              <TextField fx:id="maDoDungTextField" layoutX="209.0" layoutY="23.0" prefHeight="30.0" prefWidth="315.0" promptText="Mã đồ dùng" style="-fx-border-color: #3f4d67; -fx-border-radius: 10px; -fx-background-color: transparent;">
+                  <font>
+                      <Font name="Segoe UI Italic" size="14.0" />
+                  </font>
+              </TextField>
+         </children>
+      </Pane>
+      <Pane fx:id="soLuongKhaDungPane"  layoutX="4.0" layoutY="294.0" prefHeight="88.0" prefWidth="551.0">
+         <children>
+              <!--Số lượng khả dụng-->
+              <Text layoutX="35.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số Lượng Khả Dụng" textAlignment="CENTER" wrappingWidth="167.5140380859375">
+                  <font>
+                      <Font name="Segoe UI" size="18.0" />
+                  </font>
+              </Text>
+              <TextField fx:id="soLuongKhaDungTextField" layoutX="227.0" layoutY="32.0" prefHeight="30.0" prefWidth="315.0" promptText="Số lượng khả dụng" style="-fx-border-color: #3f4d67; -fx-border-radius: 10px; -fx-background-color: transparent;">
+                  <font>
+                      <Font name="Segoe UI Italic" size="14.0" />
+                  </font>
+              </TextField>
+         </children>
+      </Pane>
+
+    </children>
+</AnchorPane>
